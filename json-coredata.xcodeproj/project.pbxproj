@@ -25,6 +25,14 @@
 		0D3CBC2B18B690250003453C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3CBC0618B690250003453C /* CoreData.framework */; };
 		0D3CBC3318B690250003453C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D3CBC3118B690250003453C /* InfoPlist.strings */; };
 		0D3CBC3518B690250003453C /* json_coredataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3CBC3418B690250003453C /* json_coredataTests.m */; };
+		0DE5214118B6968E003D7E22 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5213918B6968E003D7E22 /* Article.m */; };
+		0DE5214218B6968E003D7E22 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5213918B6968E003D7E22 /* Article.m */; };
+		0DE5214318B6968E003D7E22 /* Issue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5213B18B6968E003D7E22 /* Issue.m */; };
+		0DE5214418B6968E003D7E22 /* Issue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5213B18B6968E003D7E22 /* Issue.m */; };
+		0DE5214518B6968E003D7E22 /* _Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5213E18B6968E003D7E22 /* _Article.m */; };
+		0DE5214618B6968E003D7E22 /* _Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5213E18B6968E003D7E22 /* _Article.m */; };
+		0DE5214718B6968E003D7E22 /* _Issue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5214018B6968E003D7E22 /* _Issue.m */; };
+		0DE5214818B6968E003D7E22 /* _Issue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5214018B6968E003D7E22 /* _Issue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,14 @@
 		0D3CBC3018B690250003453C /* json-coredataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "json-coredataTests-Info.plist"; sourceTree = "<group>"; };
 		0D3CBC3218B690250003453C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0D3CBC3418B690250003453C /* json_coredataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = json_coredataTests.m; sourceTree = "<group>"; };
+		0DE5213818B6968E003D7E22 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		0DE5213918B6968E003D7E22 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		0DE5213A18B6968E003D7E22 /* Issue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Issue.h; sourceTree = "<group>"; };
+		0DE5213B18B6968E003D7E22 /* Issue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Issue.m; sourceTree = "<group>"; };
+		0DE5213D18B6968E003D7E22 /* _Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Article.h; sourceTree = "<group>"; };
+		0DE5213E18B6968E003D7E22 /* _Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Article.m; sourceTree = "<group>"; };
+		0DE5213F18B6968E003D7E22 /* _Issue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Issue.h; sourceTree = "<group>"; };
+		0DE5214018B6968E003D7E22 /* _Issue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Issue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +139,7 @@
 		0D3CBC0818B690250003453C /* json-coredata */ = {
 			isa = PBXGroup;
 			children = (
+				0DE5213618B6968E003D7E22 /* CoreData */,
 				0D3CBC1118B690250003453C /* AppDelegate.h */,
 				0D3CBC1218B690250003453C /* AppDelegate.m */,
 				0D3CBC1418B690250003453C /* Main.storyboard */,
@@ -166,6 +183,37 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0DE5213618B6968E003D7E22 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0DE5213718B6968E003D7E22 /* Human */,
+				0DE5213C18B6968E003D7E22 /* Machine */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0DE5213718B6968E003D7E22 /* Human */ = {
+			isa = PBXGroup;
+			children = (
+				0DE5213818B6968E003D7E22 /* Article.h */,
+				0DE5213918B6968E003D7E22 /* Article.m */,
+				0DE5213A18B6968E003D7E22 /* Issue.h */,
+				0DE5213B18B6968E003D7E22 /* Issue.m */,
+			);
+			path = Human;
+			sourceTree = "<group>";
+		};
+		0DE5213C18B6968E003D7E22 /* Machine */ = {
+			isa = PBXGroup;
+			children = (
+				0DE5213D18B6968E003D7E22 /* _Article.h */,
+				0DE5213E18B6968E003D7E22 /* _Article.m */,
+				0DE5213F18B6968E003D7E22 /* _Issue.h */,
+				0DE5214018B6968E003D7E22 /* _Issue.m */,
+			);
+			path = Machine;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,6 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D3CBC3818B690250003453C /* Build configuration list for PBXNativeTarget "json-coredata" */;
 			buildPhases = (
+				0D3CBC3E18B6932A0003453C /* MoGenerator */,
 				0D3CBBF918B690250003453C /* Sources */,
 				0D3CBBFA18B690250003453C /* Frameworks */,
 				0D3CBBFB18B690250003453C /* Resources */,
@@ -258,13 +307,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D3CBC3E18B6932A0003453C /* MoGenerator */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = MoGenerator;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${SOURCE_ROOT}/${PROJECT_NAME}\n/usr/local/bin/mogenerator --template-var arc=true -m json_coredata.xcdatamodeld -M CoreData/Machine -H CoreData/Human";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D3CBBF918B690250003453C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE5214518B6968E003D7E22 /* _Article.m in Sources */,
+				0DE5214318B6968E003D7E22 /* Issue.m in Sources */,
 				0D3CBC1F18B690250003453C /* DetailViewController.m in Sources */,
 				0D3CBC1C18B690250003453C /* MasterViewController.m in Sources */,
+				0DE5214118B6968E003D7E22 /* Article.m in Sources */,
+				0DE5214718B6968E003D7E22 /* _Issue.m in Sources */,
 				0D3CBC1318B690250003453C /* AppDelegate.m in Sources */,
 				0D3CBC0F18B690250003453C /* main.m in Sources */,
 				0D3CBC1918B690250003453C /* json_coredata.xcdatamodeld in Sources */,
@@ -275,6 +345,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE5214818B6968E003D7E22 /* _Issue.m in Sources */,
+				0DE5214618B6968E003D7E22 /* _Article.m in Sources */,
+				0DE5214418B6968E003D7E22 /* Issue.m in Sources */,
+				0DE5214218B6968E003D7E22 /* Article.m in Sources */,
 				0D3CBC3518B690250003453C /* json_coredataTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +552,7 @@
 				0D3CBC3A18B690250003453C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D3CBC3B18B690250003453C /* Build configuration list for PBXNativeTarget "json-coredataTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +561,7 @@
 				0D3CBC3D18B690250003453C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
