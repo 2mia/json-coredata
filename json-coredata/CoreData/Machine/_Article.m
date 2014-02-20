@@ -4,6 +4,7 @@
 #import "_Article.h"
 
 const struct ArticleAttributes ArticleAttributes = {
+	.id = @"id",
 };
 
 const struct ArticleRelationships ArticleRelationships = {
@@ -42,6 +43,13 @@ const struct ArticleFetchedProperties ArticleFetchedProperties = {
 
 	return keyPaths;
 }
+
+
+
+
+@dynamic id;
+
+
 
 
 

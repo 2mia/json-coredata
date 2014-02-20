@@ -5,6 +5,7 @@
 
 
 extern const struct ArticleAttributes {
+	__unsafe_unretained NSString *id;
 } ArticleAttributes;
 
 extern const struct ArticleRelationships {
@@ -17,6 +18,7 @@ extern const struct ArticleFetchedProperties {
 @class Issue;
 
 
+
 @interface ArticleID : NSManagedObjectID {}
 @end
 
@@ -25,6 +27,16 @@ extern const struct ArticleFetchedProperties {
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 - (ArticleID*)objectID;
+
+
+
+
+
+@property (nonatomic, strong) NSString* id;
+
+
+
+//- (BOOL)validateId:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -50,6 +62,12 @@ extern const struct ArticleFetchedProperties {
 @end
 
 @interface _Article (CoreDataGeneratedPrimitiveAccessors)
+
+
+- (NSString*)primitiveId;
+- (void)setPrimitiveId:(NSString*)value;
+
+
 
 
 

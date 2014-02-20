@@ -5,6 +5,8 @@
 
 
 extern const struct IssueAttributes {
+	__unsafe_unretained NSString *id;
+	__unsafe_unretained NSString *title;
 } IssueAttributes;
 
 extern const struct IssueRelationships {
@@ -16,7 +18,9 @@ extern const struct IssueFetchedProperties {
 } IssueFetchedProperties;
 
 @class Article;
-@class NSManagedObject;
+@class Tag;
+
+
 
 
 @interface IssueID : NSManagedObjectID {}
@@ -27,6 +31,30 @@ extern const struct IssueFetchedProperties {
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 - (IssueID*)objectID;
+
+
+
+
+
+@property (nonatomic, strong) NSNumber* id;
+
+
+
+@property int32_t idValue;
+- (int32_t)idValue;
+- (void)setIdValue:(int32_t)value_;
+
+//- (BOOL)validateId:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
+@property (nonatomic, strong) NSString* title;
+
+
+
+//- (BOOL)validateTitle:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -53,12 +81,27 @@ extern const struct IssueFetchedProperties {
 
 - (void)addTags:(NSSet*)value_;
 - (void)removeTags:(NSSet*)value_;
-- (void)addTagsObject:(NSManagedObject*)value_;
-- (void)removeTagsObject:(NSManagedObject*)value_;
+- (void)addTagsObject:(Tag*)value_;
+- (void)removeTagsObject:(Tag*)value_;
 
 @end
 
 @interface _Issue (CoreDataGeneratedPrimitiveAccessors)
+
+
+- (NSNumber*)primitiveId;
+- (void)setPrimitiveId:(NSNumber*)value;
+
+- (int32_t)primitiveIdValue;
+- (void)setPrimitiveIdValue:(int32_t)value_;
+
+
+
+
+- (NSString*)primitiveTitle;
+- (void)setPrimitiveTitle:(NSString*)value;
+
+
 
 
 
