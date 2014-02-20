@@ -26,7 +26,8 @@ static RKObjectManager* _manager;
 #endif
     
     RKObjectManager *manager = _manager = [RKObjectManager managerWithBaseURL:
-                                           [NSURL URLWithString:@"http://localhost:3000"]];
+                                           //[NSURL URLWithString:@"http://localhost:3000"]];
+                                           [NSURL URLWithString:@"http://lit-castle-4555.herokuapp.com"]];
     
     NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
     RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
