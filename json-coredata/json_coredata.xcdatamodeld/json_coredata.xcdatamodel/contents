@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Article" representedClassName="Article" syncable="YES">
+        <relationship name="issues" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Issue" inverseName="article" inverseEntity="Issue" syncable="YES"/>
+    </entity>
+    <entity name="Issue" representedClassName="Issue" syncable="YES">
+        <relationship name="article" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Article" inverseName="issues" inverseEntity="Article" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="issue" inverseEntity="Tag" syncable="YES"/>
+    </entity>
+    <entity name="Tag" syncable="YES">
+        <relationship name="issue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Issue" inverseName="tags" inverseEntity="Issue" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Issue" positionX="-47" positionY="-369" width="128" height="73"/>
+        <element name="Article" positionX="-297" positionY="-369" width="128" height="58"/>
+        <element name="Tag" positionX="171" positionY="-355" width="128" height="58"/>
     </elements>
 </model>
